@@ -2,7 +2,7 @@ import streamlit as st
 import snowflake.connector
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+
 
 # set_page_config needs to be the first Streamlit command in your script
 st.set_page_config(layout="wide")
@@ -28,10 +28,10 @@ def load_data():
 def run_query(query):
     with conn.cursor() as cur:
         cur.execute(query)
-        return cur.fetchall()
+        return cur.fetch_pandas_all()
 
 rows = run_query("select * from ML;")
-st.write(rows.shape)
+
 
 st.write(rows)
 # Print results.

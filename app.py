@@ -1,5 +1,9 @@
 import streamlit as st
 import snowflake.connector
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot
+
 # set_page_config needs to be the first Streamlit command in your script
 st.set_page_config(layout="wide")
 st.title("CPG Forecasting Models Monitoring")
@@ -27,6 +31,7 @@ def run_query(query):
         return cur.fetchall()
 
 rows = run_query("select * from ML;")
+st.write(rows.shape)
 
 st.write(rows)
 # Print results.

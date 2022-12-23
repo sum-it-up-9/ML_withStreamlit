@@ -28,9 +28,9 @@ def run_query(query):
 
 rows = run_query("select CURRENT_ACCOUNT();")
 
+st.write(rows)
 # Print results.
-for row in rows:
-    st.write(f"{row[0]} has a :{row[1]}:")
+
 
 
 

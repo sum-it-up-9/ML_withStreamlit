@@ -16,9 +16,9 @@ conn = init_connection()
 
 def load_data():
    #rows = run_query("SELECT * from mytable;")
-   cur = conn.cursor().execute("SELECT count(*) from ML;")
+   cur = conn.cursor().execute("select current_user();")
    #cur = conn.cursor().execute(query)
-   return cur.fetch_pandas_all()
+   #return cur.fetch_pandas_all()
 
 
 

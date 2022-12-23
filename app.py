@@ -28,12 +28,12 @@ def load_data():
 def run_query(query):
     with conn.cursor() as cur:
         cur.execute(query)
-        return cur.fetch_pandas_all()
+        return cur.fetchall()
 
 rows = run_query("select * from ML;")
 
 
-st.write(rows)
+st.write(type(rows))
 # Print results.
 
 

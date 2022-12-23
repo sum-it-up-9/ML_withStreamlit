@@ -17,8 +17,8 @@ conn = init_connection()
 def load_data():
    #rows = run_query("SELECT * from mytable;")
    cur = conn.cursor().execute("select CURRENT_ACCOUNT();")
-   #cur = conn.cursor().execute(query)
-   #return cur.fetch_pandas_all()
+   cur = conn.cursor().execute(query)
+   return cur.fetch_pandas_all()
 
 
 

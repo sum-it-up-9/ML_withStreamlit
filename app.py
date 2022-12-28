@@ -43,7 +43,7 @@ date=run_query("select DDATE from ACTVSPREC;")
 # Create DataFrame from multiple lists
 
 
-df2=pd.DataFrame(list(zip(date,actual,prediction)))
+df2=pd.DataFrame(list(zip(date,actual,prediction)),columns=['date','actual','prediction'])
 st.write(df2)
 
 #chart_data = pd.DataFrame(

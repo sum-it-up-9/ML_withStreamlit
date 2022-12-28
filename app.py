@@ -35,9 +35,9 @@ def run_query(query):
 #rows = run_query("select * from ML;")
 
 
-actual=run_query("select ACTUAL from ACTVSPREC limit 5;")
-prediction=run_query("select PREDICTIONS from ACTVSPREC limit 5;")
-date=run_query("select DDATE from ACTVSPREC limit 5;")
+actual=run_query("select ACTUAL from ACTVSPREC limit 10;")
+prediction=run_query("select PREDICTIONS from ACTVSPREC limit 10;")
+date=run_query("select DDATE from ACTVSPREC ;")
 
 actual.sort()
 prediction.sort()

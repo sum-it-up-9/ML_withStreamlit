@@ -37,7 +37,7 @@ actual=run_query("select ACTUAL from ACTVSPREC;")
 prediction=run_query("select PREDICTIONS from ACTVSPREC;")
 date=run_query("select DDATE from ACTVSPREC;")
 
-df2=pd.DataFrame(actual,prediction,date)
+df2=pd.DataFrame(actual)
 
 
 

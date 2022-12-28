@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.express as px
 import snowflake.connector
 import pandas as pd
 import numpy as np

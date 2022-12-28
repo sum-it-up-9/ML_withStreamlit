@@ -60,17 +60,19 @@ line_fig = px.line(
 )
 
 
+df = pd.DataFrame({
+  'date': ['10/1/2019','10/2/2019', '10/3/2019', '10/4/2019'],
+  'Actual': [46, 48, 47, 44],
+    'Prediction':[47,47,45,46]
+})
 
 
 
 
 
-# passing in the Plotly graph object to Streamlit
-st.plotly_chart(line_fig)
 
 # Print results.
 
 
-
-#st.line_chart(df2,x="date",y=["actual","prediction"])
+st.line_chart(df)
 

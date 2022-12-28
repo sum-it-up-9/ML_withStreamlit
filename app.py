@@ -87,7 +87,7 @@ fig = px.scatter(
     df2,
     x="date",
     y=["actual", "prediction"],
-    color="blue",
+
     color_continuous_scale="reds",
 )
 st.plotly_chart(fig, theme="streamlit", use_conatiner_width=True)

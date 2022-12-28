@@ -61,7 +61,7 @@ line_fig = px.line(
 
 
 
-Plotly graph configs
+#Plotly graph configs
 legend_names = {"actual": "Actual Sales", "prediction": "Forecasted Sales"}
 line_fig.for_each_trace(lambda t: t.update(name=legend_names[t.name],
                                      legendgroup=legend_names[t.name]))

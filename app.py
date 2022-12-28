@@ -37,11 +37,13 @@ actual=run_query("select ACTUAL from ACTVSPREC;")
 prediction=run_query("select PREDICTIONS from ACTVSPREC;")
 date=run_query("select DDATE from ACTVSPREC;")
 
-df2=pd.DataFrame(actual)
+
+# Create DataFrame from multiple lists
 
 
-
+df2=pd.DataFrame(list(zip(date,actual,prediction)))
 st.write(df2)
+
 #chart_data = pd.DataFrame(
  #   np.random.randn(20, 3),
  #   columns=['a', 'b', 'c'])

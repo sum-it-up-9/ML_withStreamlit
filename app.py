@@ -84,7 +84,7 @@ line_fig.update_layout(
 # Print results.
 
 fig = px.scatter(
-    df,
+    df2,
     x="date",
     y=["actual", "prediction"],
     color="blue",

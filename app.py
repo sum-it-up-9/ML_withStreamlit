@@ -30,15 +30,23 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()
 
-rows = run_query("select * from ML;")
+#rows = run_query("select * from ML;")
 
 
-st.write(type(rows))
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=['a', 'b', 'c'])
+actual=run_query("select ACTUAL from ACTVSPREC;")
+prediction=run_query("select PREDICTIONS from ACTVSPREC;")
+date=run_query("select DDATE from ACTVSPREC;")
 
-st.line_chart(rows)
+df2=pd.DataFrame(actual,prediction,date)
+
+
+
+st.write(df2)
+#chart_data = pd.DataFrame(
+ #   np.random.randn(20, 3),
+ #   columns=['a', 'b', 'c'])
+
+#st.line_chart(rows)
 # Print results.
 
 

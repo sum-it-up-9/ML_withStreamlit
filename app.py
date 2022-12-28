@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import snowflake.connector
-pip install plotly
+
 import pandas as pd
 import numpy as np
 

@@ -61,10 +61,7 @@ line_fig = px.line(
 
 
 
-#Plotly graph configs
-legend_names = {"actual": "Actual Sales", "prediction": "Forecasted Sales"}
-line_fig.for_each_trace(lambda t: t.update(name=legend_names[t.name],
-                                     legendgroup=legend_names[t.name]))
+
 line_fig.update_layout(
    xaxis=dict(showgrid=False),
    legend=dict(
@@ -79,11 +76,11 @@ line_fig.update_layout(
 
 
 # passing in the Plotly graph object to Streamlit
-#st.plotly_chart(line_fig, use_container_width=True)
+st.plotly_chart(line_fig, use_container_width=True)
 
 # Print results.
 
 
 
-st.line_chart(df2,x="date",y=["actual","prediction"])
+#st.line_chart(df2,x="date",y=["actual","prediction"])
 

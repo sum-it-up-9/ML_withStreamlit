@@ -37,10 +37,9 @@ def run_query(query):
 
 actual=run_query("select ACTUAL from ACTVSPREC limit 10;")
 prediction=run_query("select PREDICTIONS from ACTVSPREC limit 10;")
-date=run_query("select DDATE from ACTVSPREC ;")
+date=run_query("select DDATE from ACTVSPREC limit 10 ;")
 
-actual.sort()
-prediction.sort()
+
 # Create DataFrame from multiple lists
 
 
@@ -84,6 +83,13 @@ line_fig.update_layout(
 
 # Print results.
 
-
-st.line_chart(data=df2, x=date, y=["actual", "prediction"], width=0, height=0, use_container_width=True)
+fig = px.scatter(
+    df,
+    x="date",
+    y=["actual", "prediction"],
+    color="blue",
+    color_continuous_scale="reds",
+)
+st.plotly_chart(fig, theme="streamlit", use_conatiner_width=True)
+#st.line_chart(data=df2, x="date", y=["actual", "prediction"], width=0, height=0, use_container_width=True)
 

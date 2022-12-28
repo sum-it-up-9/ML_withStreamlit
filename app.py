@@ -84,5 +84,5 @@ line_fig.update_layout(
 # Print results.
 
 
-st.line_chart(data=df2, *, x=date, y=["actual", "prediction"], width=0, height=0, use_container_width=True)
+st.line_chart(data=df2, x=date, y=["actual", "prediction"], width=0, height=0, use_container_width=True)
 

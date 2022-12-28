@@ -53,7 +53,7 @@ st.write(df2)
 #st.line_chart(rows)
 line_fig = px.line(
    df2,
-   x="date",
+   x=df2[0],
    y=["actual", "prediction"],
    title="Actual Values vs Forecasted values",
    labels={
@@ -64,7 +64,7 @@ line_fig = px.line(
 )
 
 # Plotly graph configs
-legend_names = {"sales": "Actual Sales", "sales_forecast": "Forecasted Sales"}
+#legend_names = {"sales": "Actual Sales", "sales_forecast": "Forecasted Sales"}
 line_fig.for_each_trace(lambda t: t.update(name=legend_names[t.name],
                                      legendgroup=legend_names[t.name]))
 line_fig.update_layout(

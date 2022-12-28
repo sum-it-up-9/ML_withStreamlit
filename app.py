@@ -74,6 +74,6 @@ df = pd.DataFrame({
 # Print results.
 
 
-#st.line_chart(df2, x="date",
+st.line_chart(df2, x="date",
    y=["actual", "prediction"],)
 

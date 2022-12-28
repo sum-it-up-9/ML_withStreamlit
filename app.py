@@ -75,6 +75,5 @@ df = pd.DataFrame({
 
 
 st.line_chart(df, x="date",
-   y=["Actual", "Prediction"],
-  title="Actual Values vs Forecasted values")
-
+   y=["Actual", "Prediction"])
+  

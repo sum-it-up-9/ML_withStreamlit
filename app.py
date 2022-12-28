@@ -35,9 +35,9 @@ def run_query(query):
 #rows = run_query("select * from ML;")
 
 
-actual=run_query("select ACTUAL from ACTVSPREC;")
-prediction=run_query("select PREDICTIONS from ACTVSPREC;")
-date=run_query("select DDATE from ACTVSPREC;")
+actual=run_query("select ACTUAL from ACTVSPREC limit 5;")
+prediction=run_query("select PREDICTIONS from ACTVSPREC limit 5;")
+date=run_query("select DDATE from ACTVSPREC limit 5;")
 
 
 # Create DataFrame from multiple lists

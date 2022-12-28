@@ -83,13 +83,6 @@ line_fig.update_layout(
 
 # Print results.
 
-fig = px.scatter(
-    df2,
-    x="date",
-    y=["actual", "prediction"],
 
-    color_continuous_scale="reds",
-)
-st.plotly_chart(fig, theme="streamlit", use_conatiner_width=True)
-#st.line_chart(data=df2, x="date", y=["actual", "prediction"], width=0, height=0, use_container_width=True)
+st.line_chart(df2)
 

@@ -53,7 +53,7 @@ st.write(df2)
 #st.line_chart(rows)
 line_fig = px.line(
    df2,
-   x=df2[0],
+   x=date,
    y=["actual", "prediction"],
    title="Actual Values vs Forecasted values",
    labels={

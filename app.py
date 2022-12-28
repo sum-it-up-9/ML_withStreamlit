@@ -58,6 +58,21 @@ line_fig = px.line(
    title="Actual Values vs Forecasted values",
  
 )
+#legend_names = {"sales": "Actual Sales", "sales_forecast": "Forecasted Sales"}
+line_fig.update_layout(
+   xaxis=dict(showgrid=False),
+   legend=dict(
+       yanchor="top",
+       y=0.99,
+       xanchor="right",
+       x=0.99
+   ),
+   title_x=0.5,
+   height=600
+)
+
+# passing in the Plotly graph object to Streamlit
+#st.plotly_chart(line_fig, use_container_width=True)
 
 
 df = pd.DataFrame({

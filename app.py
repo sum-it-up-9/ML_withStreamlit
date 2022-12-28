@@ -79,10 +79,10 @@ line_fig.update_layout(
 
 
 # passing in the Plotly graph object to Streamlit
-st.plotly_chart(line_fig, use_container_width=True)
+#st.plotly_chart(line_fig, use_container_width=True)
 
 # Print results.
 
 
-
+st.line_chart(data=df2, *, x=date, y=["actual", "prediction"], width=0, height=0, use_container_width=True)
 

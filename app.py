@@ -53,14 +53,10 @@ st.write(df2)
 #st.line_chart(rows)
 line_fig = px.line(
    df2,
-   x=date,
-   y=["actual", "prediction"],
+   x="0",
+   y=["1", "2"],
    title="Actual Values vs Forecasted values",
-   labels={
-       "sales_date": "Date",
-       "value": "Pairs",
-       "variable": "Legend"
-   }
+ 
 )
 
 # Plotly graph configs

@@ -84,5 +84,5 @@ line_fig.update_layout(
 # Print results.
 
 
-st.line_chart(y=["actual","predictions"])
+st.line_chart(actual)
 

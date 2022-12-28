@@ -35,9 +35,9 @@ def run_query(query):
 #rows = run_query("select * from ML;")
 
 
-actual=run_query("select ACTUAL from ACTVSPREC limit 10;")
-prediction=run_query("select PREDICTIONS from ACTVSPREC limit 10;")
-date=run_query("select DDATE from ACTVSPREC limit 10 ;")
+actual=run_query("select ACTUAL from ACTVSPREC limit 5;")
+prediction=run_query("select PREDICTIONS from ACTVSPREC limit 5;")
+date=run_query("select DDATE from ACTVSPREC limit 5 ;")
 
 
 # Create DataFrame from multiple lists
@@ -74,6 +74,6 @@ df = pd.DataFrame({
 # Print results.
 
 
-st.line_chart(df, x="date",
-   y=["Actual", "Prediction"],)
+#st.line_chart(df2, x="date",
+   y=["actual", "prediction"],)
 

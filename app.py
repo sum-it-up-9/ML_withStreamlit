@@ -49,6 +49,37 @@ st.write(df2)
  #   columns=['a', 'b', 'c'])
 
 #st.line_chart(rows)
+line_fig = px.line(
+   df2,
+   x="date",
+   y=["actual", "prediction"],
+   title="Actual Values vs Forecasted values",
+   labels={
+       "sales_date": "Date",
+       "value": "Pairs",
+       "variable": "Legend"
+   }
+)
+
+# Plotly graph configs
+legend_names = {"sales": "Actual Sales", "sales_forecast": "Forecasted Sales"}
+line_fig.for_each_trace(lambda t: t.update(name=legend_names[t.name],
+                                     legendgroup=legend_names[t.name]))
+line_fig.update_layout(
+   xaxis=dict(showgrid=False),
+   legend=dict(
+       yanchor="top",
+       y=0.99,
+       xanchor="right",
+       x=0.99
+   ),
+   title_x=0.5,
+   height=600
+)
+
+# passing in the Plotly graph object to Streamlit
+st.plotly_chart(line_fig, use_container_width=True)
+
 # Print results.
 
 

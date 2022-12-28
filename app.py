@@ -84,5 +84,5 @@ line_fig.update_layout(
 # Print results.
 
 
-st.line_chart(df2)
+st.line_chart(date)
 
